@@ -4,12 +4,15 @@ public class Mover : MonoBehaviour
 {
     void Start()
     {
-        transform.Translate(1, 0, 0);
+
     }
 
     void Update()
     {
-        transform.Translate(0.01f, 0, 0);
+        float xValue = Input.GetAxis("Horizontal");
+        float yValue = 0f;
+        float zValue = Input.GetAxis("Vertical");
+        transform.Translate(xValue, yValue, zValue);
 
     }
 }
